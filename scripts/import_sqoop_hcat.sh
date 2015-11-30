@@ -84,7 +84,7 @@ sqoop_it()
         	sed -i -e "s/table_name/$TABLE/g" $OPTDIR/sqoop_hive_init_$TABLE.hive
         echo "change table_name to $TABLE in file $OPTDIR/sqoop_hive_init_$TABLE.hive" >> "$logfile" 2>&1
 	sleep 1
-#	hive -f "$OPTDIR/sqoop_hive_init_$TABLE.hive" >> "$logfile" 2>&1
+	hive -f "$OPTDIR/sqoop_hive_init_$TABLE.hive" >> "$logfile" 2>&1
 	echo "Ending alter hive $TABLE to ORC "  >> "$logfile" 2>&1
 	echo "Starting remove hadoop files from hive $TABLE to ORC "  >> "$logfile" 2>&1
 	echo "Ending remove hadoop files from hive $TABLE to ORC "  >> "$logfile" 2>&1
