@@ -1,0 +1,17 @@
+--connect 
+jdbc:netezza://netezza_host:5480/db_name
+--username 
+netezza_npa 
+--password-file 
+/user/oozie/sqoop.txt
+--table
+table_name
+--where
+'TIJDID BETWEEN datum1  AND datum2'
+-m3
+--split-by 
+split_name
+--hcatalog-database
+raw_sqoop
+--hcatalog-table
+table_name

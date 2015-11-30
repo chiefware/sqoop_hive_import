@@ -1,0 +1,15 @@
+--connect 
+jdbc:netezza://netezza_host:5480/db_name
+--username 
+netezza_npa
+--password-file 
+/user/oozie/sqoop.txt
+--query
+'select * from table_name where $CONDITIONS LIMIT 1'
+--split-by 
+split_name
+--target-dir
+/data/raw_sqoop/table_name
+--hive-import
+--hive-table
+raw_sqoop.table_name

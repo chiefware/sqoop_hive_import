@@ -1,0 +1,15 @@
+--connect 
+jdbc:netezza://netezzahost:5480/db_name
+--username 
+netezza_npa
+--password-file 
+/user/oozie/sqoop.txt
+--table
+table_name
+-m3
+--split-by 
+split_name
+--hcatalog-database
+raw_sqoop
+--hcatalog-table
+table_name

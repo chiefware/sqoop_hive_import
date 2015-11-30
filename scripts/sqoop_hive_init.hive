@@ -1,0 +1,3 @@
+use raw_sqoop;
+ALTER TABLE table_name SET FILEFORMAT ORC;
+ALTER TABLE table_name SET TBLPROPERTIES ("orc.compress"="SNAPPY");
